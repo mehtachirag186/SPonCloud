@@ -22,11 +22,11 @@ steps:
     backendAWSKey: 'dev/07-backend-state/users/backend-state/backend.tfstate'
 
    
-- task: TerraformTaskV2@2
-  inputs:
-    provider: 'aws'
-    command: 'apply'
-    environmentServiceNameAWS: 'aws terraform connection'
+# - task: TerraformTaskV2@2
+#   inputs:
+#     provider: 'aws'
+#     command: 'apply'
+#     environmentServiceNameAWS: 'aws terraform connection'
 
 - task: TerraformTaskV2@2
   inputs:
