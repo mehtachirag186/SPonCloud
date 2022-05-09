@@ -19,17 +19,17 @@ steps:
     command: 'init'
     backendServiceAWS: 'aws terraform connection'
     backendAWSBucketName: 'dev-applications-backend-state-mehtachirag186-tf'
-    backendAWSKey: 'dev/07-backend-state/users/backend-state/backend.tfstate'
+    backendAWSKey: 'dev/backend.tfstate'
 
    
-# - task: TerraformTaskV2@2
-#   inputs:
-#     provider: 'aws'
-#     command: 'apply'
-#     environmentServiceNameAWS: 'aws terraform connection'
-
 - task: TerraformTaskV2@2
   inputs:
     provider: 'aws'
-    command: 'destroy'
+    command: 'apply'
     environmentServiceNameAWS: 'aws terraform connection'
+
+# - task: TerraformTaskV2@2
+#   inputs:
+#     provider: 'aws'
+#     command: 'destroy'
+#     environmentServiceNameAWS: 'aws terraform connection'
