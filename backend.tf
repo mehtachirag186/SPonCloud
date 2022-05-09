@@ -7,9 +7,9 @@ provider "aws" {
 resource "aws_s3_bucket" "enterprise_backend_state" {
   bucket = "dev-applications-backend-state-mehtachirag186-tf"
 
-#   lifecycle {
-#     prevent_destroy = true
-#   }
+  lifecycle {
+    prevent_destroy = true
+  }
 
   versioning {
     enabled = true
