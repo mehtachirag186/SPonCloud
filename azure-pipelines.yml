@@ -19,7 +19,7 @@ steps:
     command: 'init'
     backendServiceAWS: 'aws terraform connection'
     backendAWSBucketName: 'dev-applications-backend-state-mehtachirag186-tf'
-    backendAWSKey: '/dev/07-backend-state/users/backend-state/backend.tfstate'
+    backendAWSKey: 'dev/07-backend-state/users/backend-state/backend.tfstate'
 
    
 - task: TerraformTaskV2@2
