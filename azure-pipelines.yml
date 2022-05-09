@@ -28,3 +28,8 @@ steps:
     command: 'apply'
     environmentServiceNameAWS: 'aws terraform connection'
 
+- task: TerraformTaskV2@2
+  inputs:
+    provider: 'aws'
+    command: 'destroy'
+    environmentServiceNameAWS: 'aws terraform connection'
