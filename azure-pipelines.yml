@@ -20,6 +20,13 @@ steps:
     backendServiceAWS: 'aws terraform connection'
     backendAWSBucketName: 'dev-applications-backend-state-mehtachirag186-tf'
     backendAWSKey: '/dev/07-backend-state/users/backend-state/backend.tfstate'
+
+- task: DownloadGitHubRelease@0
+  inputs:
+    connection: 'git hub connection'
+    userRepository: 'mehtachirag186/SPonCloud'
+    defaultVersionType: 'latest'
+    downloadPath: '$(System.ArtifactsDirectory)'
     
 - task: TerraformTaskV2@2
   inputs:
