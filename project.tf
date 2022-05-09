@@ -64,10 +64,10 @@ resource "aws_security_group" "elb_nsg" {
 resource "aws_elb" "SP2019elb" {
   name               = var.loadbalancer
   instances          = [aws_instance.SP2019Machine.id]
-  availability_zones = [var.region]
+  availability_zones = ["us-east-1"]
   security_groups    = [aws_security_group.elb_nsg.id]
   subnets            = data.aws_subnet_ids.default_subnets.ids
-  availability_zones = ["us-east-1"]
+  
 
 
   listener {
